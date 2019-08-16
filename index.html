@@ -15,25 +15,54 @@
 </head>
 
 <body>
-    <nav class="nav-wrapper blue">
-        <div class="container">
-            
-            <a href="#" class="brand-logo">PN</a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-            </ul>
-            <a href="#" data-target="responsive-menu" class="sidenav-trigger right" >
-                <i class="material-icons">menu</i>
-            </a>
-        </div>
-    </nav>
+
+    <div class="navbar-fixed">
+        <nav class="nav-wrapper blue">
+            <div class="container">
+
+                <a href="#" class="brand-logo">
+                    <img src="images/pn.png" height="50" style="vertical-align: middle;" class="circle z-depth-2">
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li>
+                        <a href="#" class="dropdown-trigger" data-target="menu_drop">
+                            Seleccionar
+                            <i class="material-icons right">arrow_drop_down</i>
+                        </a>
+                    </li>
+                </ul>
+                <a href="#" data-target="responsive-menu" class="sidenav-trigger right">
+                    <i class="material-icons">menu</i>
+                </a>
+            </div>
+        </nav>
+    </div>
+    <ul id="menu_drop" class="dropdown-content">
+        <li><a href="#">Sub menu 1</a></li>
+        <li><a href="#">Sub menu 2</a></li>
+        <li><a href="#">Sub menu 3</a></li>
+    </ul>
+    <ul id="menu_sub_drop" class="dropdown-content">
+        <li><a href="#">Sub menu 1</a></li>
+        <li><a href="#">Sub menu 2</a></li>
+        <li><a href="#">Sub menu 3</a></li>
+    </ul>
     <ul id="responsive-menu" class="sidenav">
         <li><a href="#">Link 1</a></li>
         <li><a href="#">Link 2</a></li>
         <li><a href="#">Link 3</a></li>
+        <li>
+            <a href="#" class="dropdown-trigger" data-target="menu_sub_drop">
+                Seleccionar
+                <i class="material-icons right">arrow_drop_down</i>
+            </a>
+        </li>
     </ul>
+    <div class="red" style="height: 700px;"></div>
+    <div class="green" style="height: 700px;"></div>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
