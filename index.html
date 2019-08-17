@@ -9,54 +9,56 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <style>
-        .caption h3,
-        .caption h5 {
-            text-shadow: 1px 1px 1px #000;
-        }
-    </style>
     <title>Materialize</title>
 </head>
 
 <body>
-    <div class='container'>
-        <div class="row section">
-            <div class="col s4">
-                <img src="images/av-1g.jpg" class="responsive-img materialboxed z-depth-2">
-            </div>
-            <div class="col s4">
-                <img src="images/av-2g.jpg" class="responsive-img materialboxed z-depth-2">
-            </div>
-            <div class="col s4">
-                <img src="images/av-3g.jpg" class="responsive-img materialboxed z-depth-2">
-            </div>
-        </div>
+    <div class="container section">
+        <a href="#" class="sidenav-trigger" data-target="menu-lateral">
+            <i class="material-icons">menu</i>
+        </a>
     </div>
-
+    <ul id="menu-lateral" class="sidenav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="images/fondo.jpg">
+                </div>
+                <a href="#">
+                    <img src="images/cara.jpg" class="circle z-depth-2">
+                </a>
+                <a href="#">
+                    <span class="name white-text">Scarlet de programadornovato</span>
+                </a>
+                <a href="#">
+                    <span class="email white-text">scarlet@programadornovato.com</span>
+                </a>
+            </div>
+        </li>
+        <li>
+            <a href="">
+                <i class="material-icons">cloud</i>
+                Lorem, ipsum dolor.
+            </a>
+        </li>
+        <li>
+            <a href="" class="subheader">
+                Lorem, ipsum dolor.
+            </a>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li>
+            <a href="#" class="waves-effect">
+                Lorem ipsum dolor
+            </a>
+        </li>
+    </ul>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
-        var options={
-            inDuration:1000,
-            outDuration:1000,
-            onOpenStart:function(){
-                console.log("onOpenStart");
-            },
-            onOpenEnd:function(){
-                console.log("onOpenEnd");
-            },
-            onCloseStart:function(){
-                console.log("onCloseStart");
-            },
-            onCloseEnd:function(){
-                console.log("onCloseEnd");
-            }
-        };
-        document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('.materialboxed');
-            var instances = M.Materialbox.init(elems, options);
-        });
-        //M.AutoInit();
+        M.AutoInit();
     </script>
 </body>
 
