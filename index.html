@@ -9,43 +9,73 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-
+    <style>
+        .caption h3,
+        .caption h5 {
+            text-shadow: 1px 1px 1px #000;
+        }
+    </style>
     <title>Materialize</title>
 </head>
 
 <body>
-    <div class="carousel carousel-slider">
-        <a href="#" class="carousel-item">
-            <img src="images/avs1.jpg">
-        </a>
-        <a href="#" class="carousel-item">
-            <img src="images/avs2.jpg">
-        </a>
-        <a href="#" class="carousel-item">
-            <img src="images/avs3.jpg">
-        </a>
+    <div class="slider">
+        <ul class="slides">
+            <li>
+                <img src="images/avs1.jpg">
+                <div class="caption left-align">
+                    <h3>
+                        Lorem ipsum dolor sit amet.
+                    </h3>
+                    <h5>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod odio laborum distinctio quae
+                        corrupti
+                    </h5>
+                </div>
+            </li>
+            <li>
+                <img src="images/avs2.jpg">
+                <div class="caption center-align">
+                    <h3>
+                        Lorem ipsum dolor sit amet.
+                    </h3>
+                    <h5>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod odio laborum distinctio quae
+                        corrupti
+                    </h5>
+                </div>
+
+            </li>
+            <li>
+                <img src="images/avs3.jpg">
+                <div class="caption right-align">
+                    <h3>
+                        Lorem ipsum dolor sit amet.
+                    </h3>
+                    <h5>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod odio laborum distinctio quae
+                        corrupti
+                    </h5>
+                </div>
+
+            </li>
+        </ul>
     </div>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
-        var options={
-            duration:100,
-            dist:-100,
-            shift:0,
-            padding:100,
-            numVisible:3,
-            fullWidth:true,
+        var options = {
             indicators:true,
-            noWrap:true,
-            onCycleTo:function(){
-                console.log("hola slide");
-            }
+            height:700,
+            duration:500,
+            interval:500
+
         };
         document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.carousel');
-            var instances = M.Carousel.init(elems, options);
+            var elems = document.querySelectorAll('.slider');
+            var instances = M.Slider.init(elems, options);
         });
+
         //M.AutoInit();
     </script>
 </body>
