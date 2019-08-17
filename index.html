@@ -13,52 +13,24 @@
 </head>
 
 <body>
-    <div class="container section">
-        <a href="#" class="sidenav-trigger" data-target="menu-lateral">
-            <i class="material-icons">menu</i>
-        </a>
-    </div>
-    <ul id="menu-lateral" class="sidenav">
-        <li>
-            <div class="user-view">
-                <div class="background">
-                    <img src="images/fondo.jpg">
-                </div>
-                <a href="#">
-                    <img src="images/cara.jpg" class="circle z-depth-2">
-                </a>
-                <a href="#">
-                    <span class="name white-text">Scarlet de programadornovato</span>
-                </a>
-                <a href="#">
-                    <span class="email white-text">scarlet@programadornovato.com</span>
-                </a>
-            </div>
-        </li>
-        <li>
-            <a href="">
-                <i class="material-icons">cloud</i>
-                Lorem, ipsum dolor.
-            </a>
-        </li>
-        <li>
-            <a href="" class="subheader">
-                Lorem, ipsum dolor.
-            </a>
-        </li>
-        <li>
-            <div class="divider"></div>
-        </li>
-        <li>
-            <a href="#" class="waves-effect">
-                Lorem ipsum dolor
-            </a>
-        </li>
-    </ul>
+    <a href="#" class="waves-effect waves-light btn" id="tos">Tosada</a>
+
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
-        M.AutoInit();
+        document.getElementById("tos").onclick=function(){
+            M.toast({
+                html: 'Pollo',
+                displayLength:5000,
+                inDuration:5000,
+                classes:"rounded",
+                completeCallback:function(){
+                    console.log("Ya esta tu pinchi tostada");
+                },
+                activationPercent:5
+            });
+        }
+        //M.AutoInit();
     </script>
 </body>
 
