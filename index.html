@@ -19,63 +19,43 @@
 </head>
 
 <body>
-    <div class="slider">
-        <ul class="slides">
-            <li>
-                <img src="images/avs1.jpg">
-                <div class="caption left-align">
-                    <h3>
-                        Lorem ipsum dolor sit amet.
-                    </h3>
-                    <h5>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod odio laborum distinctio quae
-                        corrupti
-                    </h5>
-                </div>
-            </li>
-            <li>
-                <img src="images/avs2.jpg">
-                <div class="caption center-align">
-                    <h3>
-                        Lorem ipsum dolor sit amet.
-                    </h3>
-                    <h5>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod odio laborum distinctio quae
-                        corrupti
-                    </h5>
-                </div>
-
-            </li>
-            <li>
-                <img src="images/avs3.jpg">
-                <div class="caption right-align">
-                    <h3>
-                        Lorem ipsum dolor sit amet.
-                    </h3>
-                    <h5>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod odio laborum distinctio quae
-                        corrupti
-                    </h5>
-                </div>
-
-            </li>
-        </ul>
+    <div class='container'>
+        <div class="row section">
+            <div class="col s4">
+                <img src="images/av-1g.jpg" class="responsive-img materialboxed z-depth-2">
+            </div>
+            <div class="col s4">
+                <img src="images/av-2g.jpg" class="responsive-img materialboxed z-depth-2">
+            </div>
+            <div class="col s4">
+                <img src="images/av-3g.jpg" class="responsive-img materialboxed z-depth-2">
+            </div>
+        </div>
     </div>
+
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
-        var options = {
-            indicators:true,
-            height:700,
-            duration:500,
-            interval:500
-
+        var options={
+            inDuration:1000,
+            outDuration:1000,
+            onOpenStart:function(){
+                console.log("onOpenStart");
+            },
+            onOpenEnd:function(){
+                console.log("onOpenEnd");
+            },
+            onCloseStart:function(){
+                console.log("onCloseStart");
+            },
+            onCloseEnd:function(){
+                console.log("onCloseEnd");
+            }
         };
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.slider');
-            var instances = M.Slider.init(elems, options);
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.materialboxed');
+            var instances = M.Materialbox.init(elems, options);
         });
-
         //M.AutoInit();
     </script>
 </body>
