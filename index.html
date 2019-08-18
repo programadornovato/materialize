@@ -13,36 +13,32 @@
 </head>
 
 <body>
-    <a href="#modal1" class="waves-effect red btn modal-trigger">Modal</a>
-    <button class="waves-effect red blue modal-trigger btn" data-target="modal2">Modal 2</button>
-    <div id="modal1" class="modal">
-        <div class="modal-content">
-            <h4>Lorem, ipsum dolor.</h4>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione?</p>
-        </div>
-        <div class="modal-footer">
-            <a href="#" class="waves-effect waves-light btn-flat modal-close">Aceptar</a>
-        </div>
-    </div>
-    <div id="modal2" class="modal">
-        <div class="modal-content">
-            <h4>2Lorem, ipsum dolor.</h4>
-            <p>2Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione?</p>
-        </div>
-        <div class="modal-footer">
-            <a href="#" class="waves-effect waves-light btn-flat modal-close">Aceptar</a>
+    <div class='container section'>
+        <div class="row card-panel">
+            <form class="col s12">
+                <div class="input-field col s6">
+                    <label for="nombre">Ingresa tu nombre</label>
+                    <input type="text" id="nombre" class="validate" required>
+                </div>
+                <div class="input-field col s6">
+                    <label for="apellido">Ingresa tu apellido</label>
+                    <input type="text" id="apellido" placeholder="Apellido" class="validate" required>
+                </div>
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">alternate_email</i>
+                    <label for="email">Ingresa tu email</label>
+                    <input type="email" id="email" class="validate" required>
+                </div>
+                <button class="btn waves-effect waves-light right" type="submit" name="enviar">Enviar
+                    <i class="material-icons right">send</i>
+                </button>
+            </form>
         </div>
     </div>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
         //M.AutoInit();
-        var options={};
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.modal');
-            var instances = M.Modal.init(elems, options);
-        });
-
     </script>
 </body>
 
