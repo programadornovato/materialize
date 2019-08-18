@@ -15,51 +15,32 @@
 <body>
     <div class='container section'>
         <div class="row card-panel">
-            <!-- 
-            <form class="col s12">
-                <div class="input-field col s6">
-                    <label for="nombre">Ingresa tu nombre</label>
-                    <input type="text" id="nombre" class="validate" required>
-                </div>
-                <div class="input-field col s6">
-                    <label for="apellido">Ingresa tu apellido</label>
-                    <input type="text" id="apellido" placeholder="Apellido" class="validate" required>
-                </div>
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">alternate_email</i>
-                    <label for="email">Ingresa tu email</label>
-                    <input type="email" id="email" class="validate" required>
-                </div>
-                <button class="btn waves-effect waves-light right" type="submit" name="enviar">Enviar
-                    <i class="material-icons right">send</i>
-                </button>
-            </form>
- -->
-
-            <form class="simple_form form form-vertical col s12" novalidate="novalidate" id="new_subscriber" action="https://programadornovato.ipzmarketing.com/f/Inuiz2vsoMc" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
-
-                <div class="form-group email required subscriber_email input-field col s6">
-                    <i class="material-icons prefix">alternate_email</i>
-                    <label class="control-label email required" for="subscriber_email"><abbr title="Requerido"> </abbr> Email</label>
-                    <input class="form-control string email required" type="email" name="subscriber[email]" id="subscriber_email" />
-                </div>
-
-                <div class="form-group string optional subscriber_name input-field col s6">
-                    <label class="control-label string optional" for="subscriber_name">Nombre</label>
-                    <input class="form-control string optional" type="text" name="subscriber[name]" id="subscriber_name" />
-                </div>
-
-                <input type="text" name="anotheremail" id="anotheremail" style="position: absolute; left: -5000px" tabindex="-1" autocomplete="off" />
-                <div class="submit-wrapper">
-                    <input type="submit" name="commit" value="Enviar" class="btn btn-primary" data-disable-with="Procesando" />
-                </div>
-            </form>
-
+            <div class="col s12 input-field">
+                <i class="material-icons prefix">search</i>
+                <label for="buscar">Buscar</label>
+                <input type="text" id="buscar" class="autocomplete">
+            </div>
+            <h4 id="res"></h4>
         </div>
     </div>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var options = {
+                data: {
+                    "Apple": null,
+                    "Microsoft": null,
+                    "Google": 'https://placehold.it/250x250'
+                },
+                onAutocomplete:function(res){
+                    //console.log("Encontraste "+res);
+                    document.getElementById('res').innerHTML="Encontraste "+res;
+                }
+            };
+            var elems = document.querySelectorAll('.autocomplete');
+            var instances = M.Autocomplete.init(elems, options);
+        });
         //M.AutoInit();
     </script>
 </body>
