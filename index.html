@@ -13,40 +13,49 @@
 </head>
 
 <body>
-    <div class='container section'>
-        <div class="row">
-            <div class="progress">
-                <div class="determinate" id="barraProgreso" style="width:0%;"></div>
-            </div>
-            <button class="btn red waves-effect" id="botonCargar">Cargar</button>
-            <span id="mostrar"></span>
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="images/av-para1.jpg" alt="">
         </div>
     </div>
-
+    <div class="section black white-text">
+        <div class='container'>
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero quia facere ipsum quos fugiat libero dicta ad magni architecto consequuntur rem corrupti odit, enim, iusto tempore fugit deleniti optio, ea ut dolore quaerat. Cum error eveniet quasi dolorum modi nam sit fuga. Consectetur voluptatibus cum porro assumenda provident sapiente tempora, voluptas veniam suscipit commodi nemo aperiam, deleniti ea aut quibusdam quod molestias asperiores eos ratione quidem in ut aliquid. Cupiditate, temporibus? Sequi ratione error ipsa optio, obcaecati eius. Magni velit commodi reiciendis sapiente dicta aliquid ea. Ut molestias nisi maiores eius blanditiis corrupti odit, dolorem cumque ducimus exercitationem dicta laudantium.</p>
+        </div>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="images/av-para2.jpg" alt="">
+        </div>
+    </div>
+    <div class="section black white-text">
+        <div class='container'>
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero quia facere ipsum quos fugiat libero dicta ad magni architecto consequuntur rem corrupti odit, enim, iusto tempore fugit deleniti optio, ea ut dolore quaerat. Cum error eveniet quasi dolorum modi nam sit fuga. Consectetur voluptatibus cum porro assumenda provident sapiente tempora, voluptas veniam suscipit commodi nemo aperiam, deleniti ea aut quibusdam quod molestias asperiores eos ratione quidem in ut aliquid. Cupiditate, temporibus? Sequi ratione error ipsa optio, obcaecati eius. Magni velit commodi reiciendis sapiente dicta aliquid ea. Ut molestias nisi maiores eius blanditiis corrupti odit, dolorem cumque ducimus exercitationem dicta laudantium.</p>
+        </div>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="images/av-para3.jpg" alt="">
+        </div>
+    </div>
+    <div class="section black white-text">
+        <div class='container'>
+            <h2>Lorem, ipsum dolor.</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero quia facere ipsum quos fugiat libero dicta ad magni architecto consequuntur rem corrupti odit, enim, iusto tempore fugit deleniti optio, ea ut dolore quaerat. Cum error eveniet quasi dolorum modi nam sit fuga. Consectetur voluptatibus cum porro assumenda provident sapiente tempora, voluptas veniam suscipit commodi nemo aperiam, deleniti ea aut quibusdam quod molestias asperiores eos ratione quidem in ut aliquid. Cupiditate, temporibus? Sequi ratione error ipsa optio, obcaecati eius. Magni velit commodi reiciendis sapiente dicta aliquid ea. Ut molestias nisi maiores eius blanditiis corrupti odit, dolorem cumque ducimus exercitationem dicta laudantium.</p>
+        </div>
+    </div>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
-        var barraProgreso = document.getElementById("barraProgreso");
-        var botonCargar = document.getElementById("botonCargar");
-        var mostrar = document.getElementById("mostrar");
-        botonCargar.addEventListener("click", function (e) {
-            var xhr = new XMLHttpRequest();
-            xhr.open("POST", "https://zinoui.com/demo/progress-bar/upload.php", true);
-            if (xhr.upload) {
-                xhr.upload.onprogress = function (e) {
-                    if (e.lengthComputable) {
-                        barraProgreso.style.width = Math.floor((e.loaded / e.total) * 100) + '%';
-                        mostrar.innerText = Math.floor((e.loaded / e.total) * 100) + '%';
-                    }
-                }
-            }
-            var datosFalsos = new FormData();
-            for (var i = 0; i < 3000; i += 1) {
-                datosFalsos.append('data[]', Math.floor(Math.random() * 999999));
-            }
-            xhr.send(datosFalsos);
+        document.addEventListener('DOMContentLoaded', function () {
+            var options={
+                responsiveThreshold:700
+            };
+            var elems = document.querySelectorAll('.parallax');
+            var instances = M.Parallax.init(elems, options);
         });
-
         //M.AutoInit();
     </script>
 </body>
